@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traex</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="header">
+              <div class="cantainer">
+                <div class="logo">
+                  <h1 style="display: none" >Traex</h1>
+                  <img id="logo" src="{% static 'main/assesst/image/logo/logo.png' %}" alt="logo"/>
+                </div>
+                <div class="menu">
+                  <ul>
+                    <li {% if page == "home" %}class="selected"{% endif %}>
+                      <a href="{% url 'main:index' %}">Home</a>
+                    </li>
+                    <li {% if page == "travelogues" %}class="selected"{% endif %}>
+                      <a href="{% url 'main:travelogues' %}">Travelogues</a>
+                    </li>
+                    <li {% if page == "places" %}class="selected"{% endif %}>
+                      <a href="{% url 'main:places' %}">Places</a>
+                    </li>
+                    <li {% if page == "write" %}class="selected"{% endif %}>
+                      <a href="{% url 'main:write' %}">Write</a>
+                    </li>
+                    <li {% if page == "ai" %}class="selected"{% endif %}>
+                      <a href="#">AI(BETA)</a>
+                    </li>
+                    <li {% if page == "blog" %}class="selected"{% endif %}>
+                      <a href="#">Blog</a>
+                    </li>
+                  </ul>
+                </div>
+                <a href="#" class="selected">
+                  Login
+                </a>
+              </div>
+            </div>
+        </div>
+    </header>
+    {% block body %}
+    {% endblock body %}
+    <footer>
+        <img src="{% static 'main/assesst/image/footer/footer.png' %}" alt="">
+    </footer>
+</body>
+</html>

@@ -106,6 +106,7 @@ class Article(models.Model):
 class City(models.Model):
     name = models.CharField(max_length=100)
     latin = models.CharField(max_length=300)
+    cover = models.ImageField(upload_to='cities/')
     slug = models.SlugField(unique=True)
 
     def __str__(self):

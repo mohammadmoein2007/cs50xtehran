@@ -1,0 +1,96 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+<main>
+    <div class="aftter-header">
+        <h2 class="h2">Write</h2>
+        <h3 class="h3">We can shere about your travelogue</h3>
+    </div>
+    <div class="wrapper-box">
+    <div class="box">
+        <from>
+            <div class="first-section">
+                <div class="text-contact">
+                    <legend>
+                        Contact Details
+                    </legend>
+                </div>
+                <label for="name">Name</label>
+                <input autofocus
+                type="text" id="name"
+                name="name" autofocus
+                placeholder="name"
+                required/><br></br>
+                <label for="email">Email</label>
+                <input type="email" id="email"
+                placeholder="ob2@hotmail.com"/><br></br>
+                <label for="tel">Phone</label>
+                <input type="tel" id="tel" placeholder="+233 200001212"/><br></br>
+            </div>
+        </from>
+    </div>
+    <div class="box">
+        <form>
+            <div class="text-contact">
+                <legend >
+                    Your Travelogue
+                </legend>
+            </div>
+            <div class="first-section">
+                <label for="Travelogue-name">Your Travelogue’s name:
+                </label>
+                <input autofocus
+                type="Your Travelogue’s name:" id="Travelogue-name"
+                name="Travelogue-name" autofocus
+                placeholder="My Best Travel"
+                required/><br></br>
+                <label for="Locations">Locations:</label>
+                <input type="Locations" id="Locations"
+                name="Locations" autofocus
+                placeholder="England,London-England,Manchester"
+                required/><br></br>
+                
+                <div class="second-section">
+                <legend>
+                    write your memories
+                </legend>
+                <p>
+                    please mention the names of
+                    the places you went while writing
+                    your memories
+                </p>
+                <div class="memories">
+                    <textarea autofocus
+                    type="text" id="memories"
+                    name="memories" cols="45" rows="10" autofocus
+                    placeholder="description"></textarea><br><br>
+                </div>
+            </div>
+            <!-- <div>
+                <input type="checkbox" id="scales" name="scales" class="checkbox">
+                <label for="scales"> have read and agree</label>
+            </div> -->
+            <button>Submit</button>    
+        </form>
+    </div>
+
+      
+
+
+
+</div>
+
+        </form>
+    </div>
+
+            </div>
+</main>
+{% endblock body %}
+    <!--                <label for="dob">BirthDay</label>-->
+    <!--                <input type="date" id="dob"/><br></br>-->
+    <!--                <label for="gender"> Gender ?? </label>-->
+    <!--                <input list="genders" name="gender" id="gender"/>-->
+    <!--                <datalist id="genders"></datalist>-->
+    <!--                    <option value="female"></option>-->
+    <!--                    <option value="male"></option>-->
+    <!--                    <option value="other"></option>-->

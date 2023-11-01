@@ -1,0 +1,18 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+<main>
+    <div class="body-div">
+        <div class="c-container">
+            {% for city in cities %}
+            <a href="{% url 'main:travelogues' %}">
+                <div class="c-img">
+                    <img src="{{city.cover.url}}" alt="picture of {{city.name}}">
+                    <div class="top-left">{{city.name}}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock body %}

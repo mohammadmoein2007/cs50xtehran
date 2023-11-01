@@ -1,0 +1,29 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+<main>
+    <div>
+        <h1 class="text-2">{{travelogue.title}}</h1>
+        <div class="t-border">
+            <div class="t-body">
+                <p>
+                    {{travelogue.content}}
+                </p>
+            </div>
+            <div class="t-comment comment">
+                <div class="text-like">
+                    <img class="viwe" src="{% static 'main/assesst/image/travel/viwe.png' %}" alt="viwe" />
+                    <P>103</P>
+                </div>
+                <div class="text-like" >
+                    <img class="like" src="{% static 'main/assesst/image/travel/like.png' %}"  alt="like"/>
+                    <p>102</p>
+                    
+                </div>
+                <p class="diat"> 31 OCTOBER 2023</p>
+            </div>
+        </div>
+    </div>
+                
+</main>
+{% endblock body %}

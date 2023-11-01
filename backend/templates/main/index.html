@@ -1,0 +1,75 @@
+{% extends "main/layout.html" %}
+{% load static %}
+{% block body %}
+    <br>
+    <div class="center h-img">
+        <img src="{% static 'main/assesst/image/header/header.png' %}" alt="">
+    </div>
+<main>
+    <div class="body-div">
+        <h2 class="title">Popular cities</h2>
+        <div class="c-container">
+            {% for city in cities %}
+            <a href="{% url 'main:travelogues' %}">
+                <div class="c-img">
+                    <img src="{{city.cover.url}}" alt="picture of {{city.name}}">
+                    <div class="top-left">{{city.name}}</div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <h2 class="title">Popular travelogues</h2>
+        <div class="c-container">
+            {% for t in travelogues %}
+            <div class="t-box">
+                <h3>{{t.title}}</h3>
+                <p style="text-align: left;">{{t.content|truncatewords:20}}
+                    <br>
+                    <a href="{% url 'main:travelogue' t.slug %}">more...</a>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="b-container">
+        <img src="{% static 'main/assesst/image/homepage/blog.png' %}" alt="Blog">
+        <div class="centered">
+            <h2>Blogs</h2>
+            <b>Read articles about popular countries and <br>
+            cities in the world and learn more about them
+            </b>
+            <br> <br>
+            <a class="btn" href="">Read more</a>
+        </div>
+    </div>
+    <br>
+    <div class="body-div">
+        <div>
+            <b class="map-t">Here you can read articles and</b>
+            <br>
+            <b class="map-t">travelogues of the whole world</b>
+        </div>
+        <br>
+        <br>
+        <div class="map">
+            <img src="{% static 'main/assesst/image/homepage/map.png' %}" alt="world's map">
+        </div>
+    </div>
+    <br>
+    <div class="t-write">
+        <div>
+            <img src="{% static 'main/assesst/image/homepage/travelogue.png' %}" alt="write travelogue">
+        </div>
+        <div class="b-write">
+            <b class="map-t">Do you also want to write your own travelogue?</b>
+            <br>
+            <b class="map-t">So come to this page</b>
+            <br>
+            <br>
+            <a class="w-btn btn" href="{% url 'main:write' %}">write travelogue</a>
+        </div>
+    </div>
+</main>
+{% endblock body %}
